@@ -1,0 +1,10 @@
+# https://rclone.org/docs/
+
+[archive]
+type = local
+# type = s3 ...
+
+[remote]
+type = sftp
+host = aleph.backup.org
+user = backup
