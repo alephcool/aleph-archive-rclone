@@ -24,7 +24,7 @@ getdiff:
 
 copy:
 	@echo "copying `wc -l < state/current/paths` files to $(RCLONE_REMOTE) ..."
-	@rclone --progress --config rclone.conf --no-traverse --files-from state/current/paths copy $(RCLONE_ARCHIVE) $(RCLONE_REMOTE)
+	@rclone --progress --config rclone.conf --files-from state/current/paths copy $(RCLONE_ARCHIVE) $(RCLONE_REMOTE)
 	mv state/current state/$(NOW)
 
 clean:
